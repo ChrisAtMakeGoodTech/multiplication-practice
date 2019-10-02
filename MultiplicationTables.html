@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Multiplication Tables</title>
+	<link rel="stylesheet" href="bulma.min.css" />
+	<style>
+		td {
+			white-space: nowrap;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1 class="title">Multiplication Table Practice</h1>
+	</div>
+	<div id="range" class="container">
+		xMin: <input class="input" id="xMin" type="number" />
+		xMax: <input class="input" id="xMax" type="number" />
+		yMin: <input class="input" id="yMin" type="number" />
+		yMax: <input class="input" id="yMax" type="number" />
+		<button class="button" id="button">Create Table</button>
+	</div>
+	<div id="container" class="container"></div>
+	<script type="module" src="MultiplicationTables.js"></script>
+</body>
+
+</html>
