@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Check Work</title>
+	<link rel="stylesheet" href="bulma.min.css" />
+	<style>
+		td {
+			white-space: nowrap;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1 class="title">Checking Your Work</h1>
+	</div>
+	<div id="startup" class="container">
+		Factors: <input class="input" id="factorsInput" value="2,3,5,10" />
+		Max Digits: <input class="input" id="maxDigitsInput" value="3,1" />
+		<button class="button" id="startupButton">Start</button>
+	</div>
+	<div id="container" class="container" style="display:none;">
+		<div id="questionContainer">
+			Factors: <span id="trainingFactors"></span>
+			<table>
+				<thead>
+					<tr>
+						<th>&nbsp;</th>
+						<th>List all factors up to 10</th>
+					</tr>
+				</thead>
+				<tbody id="questionTbody">
+
+				</tbody>
+			</table>
+		</div>
+		<input id="answerInput" class="input" />
+		<button id="answerButton" class="button">Answer</button>
+	</div>
+	<script type="module" src="checkwork.js"></script>
+</body>
+
+</html>
