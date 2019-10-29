@@ -98,7 +98,7 @@ function convertToInteger(numberString) {
 }
 
 function validInput(input) {
-	const inputFactors = input.split(',').map(convertToInteger);
+	const inputFactors = input.split(' ').map(convertToInteger);
 	if (inputFactors.length > 0 && !inputFactors.some(i => Number.isNaN(i))) {
 		return inputFactors;
 	}

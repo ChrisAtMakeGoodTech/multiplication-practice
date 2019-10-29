@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Quick</title>
+	<script type="module" src="quick.js"></script>
+	<link rel="stylesheet" href="bulma.min.css" />
+	<link rel="stylesheet" href="quick.css" />
+</head>
+
+<body>
+	<div class="container wrapper">
+		<div id="first">
+			Numbers: <input class="input" id="numbers" /><br />
+			Start Seconds: <input class="input" id="start-seconds" type="number" />
+			Goal Seconds: <input class="input" id="goal-seconds" type="number" />
+			<button type="button" id="start-button" class="button">Start</button>
+		</div>
+		<div id="second">
+			<p class="is-size-1" id="remaining-seconds"></p>
+			<span id="first-number"></span> x <span id="second-number"></span> = <input id="answer" class="input" />
+			<span id="last-result"></span>
+		</div>
+	</div>
+
+</body>
+
+</html>
