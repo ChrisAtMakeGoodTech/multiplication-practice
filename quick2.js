@@ -5,7 +5,7 @@ let currentProblem;
 let currentAnswer;
 let remainingProblems;
 let startTime;
-let allWithinTimeLimit;
+let allWithinTimeLimit = true;
 
 document.getElementById('start-button').addEventListener('click', () => {
 	document.getElementById('first').style.display = 'none';
