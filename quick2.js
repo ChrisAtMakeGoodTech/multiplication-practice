@@ -29,6 +29,7 @@ function startGame() {
 	const secondNumber = document.getElementById('second-number');
 	const answer = document.getElementById('answer');
 	const lastResult = document.getElementById('last-result');
+	const lastTime = document.getElementById('last-time');
 
 	remainingProblems = [...Problems];
 
@@ -36,9 +37,8 @@ function startGame() {
 		if (answer.value == currentAnswer) {
 			const secondsTaken = (performance.now() - startTime) / 1000;
 			if (secondsTaken > goalSeconds) allWithinTimeLimit = false;
-			lastResult.classList.remove('has-text-danger');
-			lastResult.classList.add('has-text-success');
-			lastResult.textContent = `Correct! ${currentProblem.X} x ${currentProblem.Y} = ${currentProblem.Answer}. Time: ${secondsTaken}`;
+			lastResult.textContent = `Correct! ${currentProblem.X} x ${currentProblem.Y} = ${currentProblem.Answer}.`;
+			lastTime.textContent = `Time: ${secondsTaken}`;
 			startNewProblem();
 		}
 	});
