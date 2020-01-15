@@ -1,4 +1,4 @@
-import { MultiplicationProblem, getRange } from './quick2-imports.js';
+import { DivisionProblem, getRange } from './divide-imports.js';
 
 const Problems = [];
 let currentProblem;
@@ -19,7 +19,7 @@ function startGame() {
 
 	for (let x of numbers) {
 		for (let y of range) {
-			Problems.push(new MultiplicationProblem(x, y));
+			Problems.push(new DivisionProblem(x, y));
 		}
 	}
 
@@ -57,9 +57,12 @@ function startGame() {
 		let currentProblemIndex = Math.floor(Math.random() * remainingProblems.length);
 		currentProblem = remainingProblems[currentProblemIndex];
 		remainingProblems.splice(currentProblemIndex, 1);
-		firstNumber.innerHTML = currentProblem.X;
-		secondNumber.innerHTML = currentProblem.Y;
-		currentAnswer = currentProblem.Answer;
+		// firstNumber.innerHTML = currentProblem.X;
+		firstNumber.innerHTML = currentProblem.Answer;
+		// secondNumber.innerHTML = currentProblem.Y;
+		secondNumber.innerHTML = currentProblem.X;
+		// currentAnswer = currentProblem.Answer;
+		currentAnswer = currentProblem.Y;
 
 		answer.value = '';
 		answer.focus();
